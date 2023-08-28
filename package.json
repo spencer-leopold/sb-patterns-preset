@@ -2,7 +2,9 @@
   "name": "sb-patterns-preset",
   "version": "0.0.0",
   "description": "A storybook preset add-on for using patterns. ",
-  "keywords": ["storybook-addons"],
+  "keywords": [
+    "storybook-addons"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/spencer-leopold/sb-patterns-preset"
@@ -25,7 +27,12 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": ["dist/**/*", "README.md", "*.js", "*.d.ts"],
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
   "scripts": {
     "clean": "rimraf ./dist",
     "prebuild": "yarn clean",
@@ -91,7 +98,12 @@
   },
   "storybook": {
     "displayName": "Storybook Patterns",
-    "supportedFrameworks": ["react"],
+    "supportedFrameworks": [
+      "react"
+    ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
+  },
+  "dependencies": {
+    "sb-patterns": "spencer-leopold/sb-patterns"
   }
 }
