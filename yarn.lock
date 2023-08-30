@@ -7246,7 +7246,7 @@ safe-regex-test@^1.0.0:
 
 sb-patterns@spencer-leopold/sb-patterns:
   version "0.0.0"
-  resolved "https://codeload.github.com/spencer-leopold/sb-patterns/tar.gz/490aa7d916b4e3df572b9bf4f6a7934cbcbbd90a"
+  resolved "https://codeload.github.com/spencer-leopold/sb-patterns/tar.gz/313b69be03cd37056c83f2b690429ab861b0a6bc"
 
 scheduler@^0.23.0:
   version "0.23.0"
