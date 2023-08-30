@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig((options) => ({
-  entry: ["src/index.ts", "src/preset.ts"],
+  entry: ["src/index.ts", "src/preset.ts", "src/configuration.ts"],
   splitting: false,
   minify: !options.watch,
   format: ["cjs", "esm"],

@@ -22,6 +22,11 @@
       "import": "./dist/preset.mjs",
       "types": "./dist/preset.d.ts"
     },
+    "./configuration": {
+      "require": "./dist/configuration.js",
+      "import": "./dist/configuration.mjs",
+      "types": "./dist/configuration.d.ts"
+    },
     "./package.json": "./package.json"
   },
   "main": "dist/index.js",

@@ -14,6 +14,7 @@ interface EnvConfiguration extends Configuration {
   NAMESPACES: string;
 }
 
+// TODO: Should this be part of the preset config instead?
 export function config(entry: string[] = []) {
   return [...entry, require.resolve("./configuration")];
 }
