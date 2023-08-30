@@ -27,6 +27,11 @@
       "import": "./dist/configuration.mjs",
       "types": "./dist/configuration.d.ts"
     },
+    "./storiesLoader": {
+      "require": "./dist/storiesLoader.js",
+      "import": "./dist/storiesLoader.mjs",
+      "types": "./dist/storiesLoader.d.ts"
+    },
     "./package.json": "./package.json"
   },
   "main": "dist/index.js",
