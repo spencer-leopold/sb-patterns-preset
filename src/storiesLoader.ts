@@ -71,7 +71,7 @@ function transformStories(this: any, code: string) {
   const output: string[] = [];
 
   output.push(dedent`
-    import { PatternPreview, argTypes, args, storage } from '@pattern';
+    import { PatternPreview, argTypes, args, storage } from '@cmbr/sb-patterns';
 
     ${generated}
 
