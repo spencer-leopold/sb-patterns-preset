@@ -1121,10 +1121,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cmbr/sb-patterns@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@cmbr/sb-patterns/-/sb-patterns-0.0.1.tgz#03e443b26ba246f2c0fc0f7d51258267db45a61b"
-  integrity sha512-1sBV5hNWtBNkR0uA7pMIxrFE8zOCeYHVZWuCMtrbLpgq1kqa9PoGPYrXfXmfYEH2kfuMPgcgTO+KeumLQHeiXQ==
+"@cmbr/sb-patterns@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@cmbr/sb-patterns/-/sb-patterns-0.0.2.tgz#5a39c366551dcf6243db9ba16db9a232af217b99"
+  integrity sha512-IOPhGVPY/ZwVZXCLALLdWqVDe8wR0wxwjGHCseIsqf8N+Uj8r25BD6ybrN7ISdKdnkGUqDl62+D2rp8y2G5phQ==
   dependencies:
     "@ngneat/falso" "^7.1.0"
     html-dom-parser "^4.0.0"

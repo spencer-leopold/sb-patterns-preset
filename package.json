@@ -1,6 +1,6 @@
 {
   "name": "@cmbr/sb-patterns-preset",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A storybook preset add-on for using patterns. ",
   "keywords": [
     "storybook-addons"
@@ -108,7 +108,7 @@
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   },
   "dependencies": {
-    "@cmbr/sb-patterns": "^0.0.1"
+    "@cmbr/sb-patterns": "^0.0.2"
   },
   "bugs": {
     "url": "https://github.com/spencer-leopold/sb-patterns-preset/issues"
