@@ -1,4 +1,4 @@
-import { storage } from "sb-patterns";
+import { storage } from "@cmbr/sb-patterns";
 
 const namespaces = JSON.parse(process.env.NAMESPACES || "{}");
 

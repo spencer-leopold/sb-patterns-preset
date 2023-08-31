@@ -2,7 +2,7 @@
 
 var webpack = require('webpack');
 var E = require('yaml');
-var sbPatterns = require('sb-patterns');
+var sbPatterns = require('@cmbr/sb-patterns');
 var csf = require('@storybook/csf');
 var k = require('fs');
 var P = require('path');

@@ -1,7 +1,7 @@
 import { Configuration, DefinePlugin } from "webpack";
 import type { IndexerOptions, StoryIndexer } from "@storybook/types";
 
-import { AddonPatternOptions } from "sb-patterns";
+import { AddonPatternOptions } from "@cmbr/sb-patterns";
 import { csfParser } from "./csfParser";
 import fs from "fs";
 import path from "path";

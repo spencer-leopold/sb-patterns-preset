@@ -1,6 +1,6 @@
 import { Configuration } from 'webpack';
 import { StoryIndexer } from '@storybook/types';
-import { AddonPatternOptions } from 'sb-patterns';
+import { AddonPatternOptions } from '@cmbr/sb-patterns';
 
 interface EnvConfiguration extends Configuration {
     NAMESPACES: string;

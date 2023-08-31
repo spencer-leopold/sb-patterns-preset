@@ -1,9 +1,9 @@
-import type { IndexedCSFFile, IndexedStory } from '@storybook/types';
+import type { IndexedCSFFile, IndexedStory } from "@storybook/types";
 
-import type { StaticMeta } from '@storybook/csf-tools';
-import YAML from 'yaml';
-import { storage, Namespaces } from 'sb-patterns';
-import { toId } from '@storybook/csf';
+import type { StaticMeta } from "@storybook/csf-tools";
+import YAML from "yaml";
+import { storage, Namespaces } from "@cmbr/sb-patterns";
+import { toId } from "@storybook/csf";
 
 export function csfParser(
   resourcePath: string,
@@ -20,10 +20,10 @@ export function csfParser(
   }
   const defaultPattern = patternDefinition[defaultPatternId];
   const defaultPatternLabel = defaultPattern.label ?? defaultPatternId;
-  let defaultPatternNamespace = defaultPattern.namespace ?? '';
+  let defaultPatternNamespace = defaultPattern.namespace ?? "";
 
   let namespacePath = defaultPatternNamespace;
-  if (defaultPatternNamespace === '') {
+  if (defaultPatternNamespace === "") {
     Object.keys(namespaces).forEach((key) => {
       if (
         resourcePath.startsWith(namespaces[key]) &&
@@ -35,11 +35,11 @@ export function csfParser(
     });
   }
 
-  const title = defaultPatternNamespace + '/' + defaultPatternLabel;
+  const title = defaultPatternNamespace + "/" + defaultPatternLabel;
   const stories: IndexedStory[] = [];
   const meta: StaticMeta = {
     title: makeTitle(title),
-    tags: ['autodocs'],
+    tags: ["autodocs"],
   };
 
   patternIds.forEach((patternId) => {
@@ -50,13 +50,13 @@ export function csfParser(
     // concerned with here.
     storage.addDefinition(patternId, definition);
 
-    const variants = definition.variants ?? { __default: { label: 'Default' } };
+    const variants = definition.variants ?? { __default: { label: "Default" } };
     Object.keys(variants).forEach((variantName) => {
       const variantLabel = variants[variantName].label;
-      const formattedVariantLabel = variantLabel.replace(/[^a-zA-Z0-9]/g, '_');
+      const formattedVariantLabel = variantLabel.replace(/[^a-zA-Z0-9]/g, "_");
 
       const story: IndexedStory = {
-        id: toId(title, patternId + '-' + formattedVariantLabel),
+        id: toId(title, patternId + "-" + formattedVariantLabel),
         name: variantLabel,
       };
 

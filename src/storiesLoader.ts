@@ -4,7 +4,7 @@ import dedent from "ts-dedent";
 import fs from "fs";
 import generate from "@babel/generator";
 import path from "path";
-import { storage } from "sb-patterns";
+import { storage } from "@cmbr/sb-patterns";
 
 const babylon = require("babylon");
 const traverse = require("babel-traverse").default;

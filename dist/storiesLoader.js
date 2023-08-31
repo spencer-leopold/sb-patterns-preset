@@ -5,7 +5,7 @@ var y = require('ts-dedent');
 var j = require('fs');
 var v = require('@babel/generator');
 var d = require('path');
-var sbPatterns = require('sb-patterns');
+var sbPatterns = require('@cmbr/sb-patterns');
 
 function _interopDefault (e) { return e && e.__esModule ? e : { default: e }; }
 

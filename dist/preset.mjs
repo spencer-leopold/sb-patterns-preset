@@ -1,6 +1,6 @@
 import { DefinePlugin } from 'webpack';
 import E from 'yaml';
-import { storage } from 'sb-patterns';
+import { storage } from '@cmbr/sb-patterns';
 import { toId } from '@storybook/csf';
 import k, { readFileSync } from 'fs';
 import P from 'path';

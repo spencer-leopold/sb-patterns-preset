@@ -1,6 +1,6 @@
 {
   "name": "@cmbr/sb-patterns-preset",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A storybook preset add-on for using patterns. ",
   "keywords": [
     "storybook-addons"
