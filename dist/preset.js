@@ -1,23 +1,21 @@
 'use strict';
 
-var webpack = require('webpack');
-var E = require('yaml');
+var I = require('yaml');
 var sbPatterns = require('@cmbr/sb-patterns');
 var csf = require('@storybook/csf');
-var k = require('fs');
-var P = require('path');
+var C = require('fs');
+var h = require('path');
 
 function _interopDefault (e) { return e && e.__esModule ? e : { default: e }; }
 
-var E__default = /*#__PURE__*/_interopDefault(E);
-var k__default = /*#__PURE__*/_interopDefault(k);
-var P__default = /*#__PURE__*/_interopDefault(P);
+var I__default = /*#__PURE__*/_interopDefault(I);
+var C__default = /*#__PURE__*/_interopDefault(C);
+var h__default = /*#__PURE__*/_interopDefault(h);
 
-var d=(t=>typeof require<"u"?require:typeof Proxy<"u"?new Proxy(t,{get:(o,n)=>(typeof require<"u"?require:o)[n]}):t)(function(t){if(typeof require<"u")return require.apply(this,arguments);throw new Error('Dynamic require of "'+t+'" is not supported')});function S(t,o,n,e={}){let c=E__default.default.parse(o),r=Object.keys(c),a=r[0];if(!a)throw new Error(`No patterns found in ${t}`);let u=c[a],m=u.label??a,s=u.namespace??"",p=s;s===""&&Object.keys(e).forEach(i=>{t.startsWith(e[i])&&e[i].length>p.length&&(s=i,p=e[i]);});let g=s+"/"+m,f=[],l={title:n(g),tags:["autodocs"]};return r.forEach(i=>{let y=c[i];sbPatterns.storage.addDefinition(i,y);let b=y.variants??{__default:{label:"Default"}};Object.keys(b).forEach(h=>{let x=b[h].label,O=x.replace(/[^a-zA-Z0-9]/g,"_"),A={id:csf.toId(g,i+"-"+O),name:x};f.push(A);});}),{meta:l,stories:f}}var N=d("babylon"),j=d("babel-traverse").default;function Y(t=[]){return [...t,d.resolve("./configuration")]}function z(t,o){let n={},e=o.webpackAliases||{},c=o.appPath||"";return Object.keys(e).forEach(r=>{n[r]=e[r].replace(c,".");}),{...t,NAMESPACES:JSON.stringify(n)}}function X(t,o){let n=t.module?.rules||[],e=t.plugins||[];return {...t,plugins:[...e,new webpack.DefinePlugin({STORIES_CONTEXT:JSON.stringify(o.storiesContexts)})],module:{...t.module,rules:[...n,{test:/\.yml/,use:["js-yaml-loader"]},{test:/\.wingsuit\.(ts|tsx)$/,enforce:"post",use:[{loader:d.resolve("./storiesLoader")}]}]}}}var Z=async(t,o)=>{let n=o.webpackAliases||{},e={};return Object.keys(n).forEach(r=>{let a=r.replace("@","");e[a]=n[r];}),[{test:/\.wingsuit\.(ts|tsx)$/,indexer:async(r,a)=>{let u=k.readFileSync(r,"utf-8").toString(),m=N.parse(u,{sourceType:"module"}),s="";j(m,{VariableDeclaration(f){if(f.node.declarations[0].id.name==="patternDefinition"){let l=f.node.declarations[0].init.arguments[0].value;l.startsWith(".")||l.startsWith("/")?s=P__default.default.join(P__default.default.dirname(r),l):s=d.resolve(l);}}});let p=k__default.default.readFileSync(s,"utf8");return S(r,p,a.makeTitle,e)}},...t||[]]};
+var f=(t=>typeof require<"u"?require:typeof Proxy<"u"?new Proxy(t,{get:(n,r)=>(typeof require<"u"?require:n)[r]}):t)(function(t){if(typeof require<"u")return require.apply(this,arguments);throw new Error('Dynamic require of "'+t+'" is not supported')});var v=sbPatterns.getStorage();function S(t,n,r,o={}){let c=I__default.default.parse(n),e=Object.keys(c),i=e[0];if(!i)throw new Error(`No patterns found in ${t}`);let p=c[i],m=p.label??i,s=p.namespace??"",u=s;s===""&&Object.keys(o).forEach(a=>{t.startsWith(o[a])&&o[a].length>u.length&&(s=a,u=o[a]);});let y=s+"/"+m,d=[],l={title:r(y),tags:["autodocs"]};return e.forEach(a=>{let g=c[a];v.addDefinition(a,g);let b=g.variants??{__default:{label:"Default"}};Object.keys(b).forEach(P=>{let x=b[P].label,A=x.replace(/[^a-zA-Z0-9]/g,"_"),E={id:csf.toId(y,a+"-"+A),name:x};d.push(E);});}),{meta:l,stories:d}}var N=f("babylon"),j=f("babel-traverse").default;function V(t,n){let r={},o=n.webpackAliases||{},c=n.appPath||"";return Object.keys(o).forEach(e=>{r[e]=o[e].replace(c,".");}),{...t,NAMESPACES:JSON.stringify(r)}}function Y(t,n){let r=t.module?.rules||[];t.plugins||[];return {...t,module:{...t.module,rules:[...r,{test:/\.yml/,use:["js-yaml-loader"]},{test:/\.wingsuit\.(ts|tsx)$/,enforce:"post",use:[{loader:f.resolve("./storiesLoader")}]}]}}}var z=async(t,n)=>{let r=n.webpackAliases||{},o={};return Object.keys(r).forEach(e=>{let i=e.replace("@","");o[i]=r[e];}),[{test:/\.wingsuit\.(ts|tsx)$/,indexer:async(e,i)=>{let p=C.readFileSync(e,"utf-8").toString(),m=N.parse(p,{sourceType:"module"}),s="";j(m,{VariableDeclaration(d){if(d.node.declarations[0].id.name==="patternDefinition"){let l=d.node.declarations[0].init.arguments[0].value;l.startsWith(".")||l.startsWith("/")?s=h__default.default.join(h__default.default.dirname(e),l):s=f.resolve(l);}}});let u=C__default.default.readFileSync(s,"utf8");return S(e,u,i.makeTitle,o)}},...t||[]]};
 
-exports.config = Y;
-exports.env = z;
-exports.storyIndexers = Z;
-exports.webpack = X;
+exports.env = V;
+exports.storyIndexers = z;
+exports.webpack = Y;
 //# sourceMappingURL=out.js.map
 //# sourceMappingURL=preset.js.map

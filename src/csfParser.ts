@@ -2,8 +2,10 @@ import type { IndexedCSFFile, IndexedStory } from "@storybook/types";
 
 import type { StaticMeta } from "@storybook/csf-tools";
 import YAML from "yaml";
-import { storage, Namespaces } from "@cmbr/sb-patterns";
+import { getStorage, Namespaces } from "@cmbr/sb-patterns";
 import { toId } from "@storybook/csf";
+
+const storage = getStorage();
 
 export function csfParser(
   resourcePath: string,

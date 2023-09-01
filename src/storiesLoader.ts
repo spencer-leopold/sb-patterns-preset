@@ -4,8 +4,9 @@ import dedent from "ts-dedent";
 import fs from "fs";
 import generate from "@babel/generator";
 import path from "path";
-import { storage } from "@cmbr/sb-patterns";
+import { getStorage } from "@cmbr/sb-patterns";
 
+const storage = getStorage();
 const babylon = require("babylon");
 const traverse = require("babel-traverse").default;
 
@@ -71,7 +72,8 @@ function transformStories(this: any, code: string) {
   const output: string[] = [];
 
   output.push(dedent`
-    import { PatternPreview, argTypes, args, storage } from '@cmbr/sb-patterns';
+    import { PatternPreview, argTypes, args, getStorage } from '@cmbr/sb-patterns';
+    const storage = getStorage();
 
     ${generated}
 

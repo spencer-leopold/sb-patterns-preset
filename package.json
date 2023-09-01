@@ -1,6 +1,6 @@
 {
   "name": "@cmbr/sb-patterns-preset",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A storybook preset add-on for using patterns. ",
   "keywords": [
     "storybook-addons"
@@ -55,13 +55,11 @@
     "@storybook/addon-interactions": "^7.0.0",
     "@storybook/addon-links": "^7.0.0",
     "@storybook/react": "^7.0.0",
-    "@storybook/react-vite": "^7.0.0",
     "@storybook/testing-library": "^0.0.14-next.1",
     "@types/node": "^18.15.0",
     "@types/react": "^18.0.34",
     "@types/webpack": "^5.28.2",
     "@types/webpack-env": "^1.18.1",
-    "@vitejs/plugin-react": "^3.1.0",
     "auto": "^10.3.0",
     "boxen": "^5.0.1",
     "dedent": "^0.7.0",
@@ -75,7 +73,6 @@
     "storybook": "^7.0.0",
     "tsup": "^6.6.3",
     "typescript": "^4.9.5",
-    "vite": "^4.1.4",
     "zx": "^1.14.1"
   },
   "peerDependencies": {

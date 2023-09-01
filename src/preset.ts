@@ -1,4 +1,4 @@
-import { Configuration, DefinePlugin } from "webpack";
+import { Configuration } from "webpack";
 import type { IndexerOptions, StoryIndexer } from "@storybook/types";
 
 import { AddonPatternOptions } from "@cmbr/sb-patterns";
@@ -12,11 +12,6 @@ const traverse = require("babel-traverse").default;
 
 interface EnvConfiguration extends Configuration {
   NAMESPACES: string;
-}
-
-// TODO: Should this be part of the preset config instead?
-export function config(entry: string[] = []) {
-  return [...entry, require.resolve("./configuration")];
 }
 
 export function env(
@@ -49,12 +44,6 @@ export function webpack(
 
   return {
     ...config,
-    plugins: [
-      ...plugins,
-      new DefinePlugin({
-        STORIES_CONTEXT: JSON.stringify(options.storiesContexts),
-      }),
-    ],
     module: {
       ...config.module,
       rules: [
