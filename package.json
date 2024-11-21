@@ -95,7 +95,7 @@
     }
   },
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "storybook": {
     "displayName": "Storybook Patterns",
